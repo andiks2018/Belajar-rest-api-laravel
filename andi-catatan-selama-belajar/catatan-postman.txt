@@ -9,5 +9,14 @@ Setelah berhasil menginstall postman selanjutnya :
 
 3. test file dengan mengganti url seperti itu {{baseUrl}}api/quote/1
 
+4 untuk menampilkan semua quote
+Key : Accept dan value : application.json
 
+{{baseUrl}}api/quote/ > tekan send
+hasilnya akan menampilkan keseluruhan quote yang ada di db
 
+selanjutnya bagaimana kalau saya hanya ingin menambahkan hanya 5 data perhalaman
+bagaimana membuktikan kalau benar sudah per lima
+{{baseUrl}}api/quote?page=2
+lihat hasilnya apakah halaman 2 sudah dimulai dari data ke 6
+berhasil

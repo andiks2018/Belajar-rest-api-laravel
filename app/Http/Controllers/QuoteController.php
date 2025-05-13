@@ -13,7 +13,11 @@ class QuoteController extends Controller
      */
     public function index()
     {
-        //
+        // menampilkan beberapa data saja per page
+        return QuoteResource::collection(Quote::paginate(5));
+
+        // menmampilkan semua data
+        // return QuoteResource::collection(Quote::all());
     }
 
     /**

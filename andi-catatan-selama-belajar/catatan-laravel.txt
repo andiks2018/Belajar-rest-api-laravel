@@ -48,4 +48,19 @@ tambahkan
 selanjutnya di controller tambhakn di show
 return new QuoteResource($quote);
 
-5
+5 pagination dan list api
+kalau kita perhatikan route:list untuk menampilkan semua data
+    api/quote .......... quote.index › QuoteController@index
+
+selanjutnya tambahkan di controller untuk menampilkan semua list data
+    public function index()
+    {
+        return QuoteResource::collection(Quote::all());
+    }
+
+bagaimana kalau menampilkan per page contoh per 5
+    {
+        return QuoteResource::collection(Quote::paginate(5));
+    }
+
+6
