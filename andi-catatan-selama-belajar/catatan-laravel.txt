@@ -63,4 +63,18 @@ bagaimana kalau menampilkan per page contoh per 5
         return QuoteResource::collection(Quote::paginate(5));
     }
 
-6
+6 bagaimana kalau kita tidak mau pakai data {} tampilan dari json itu kan ada data {}
+Tambahkan di appserviceprovider
+public function boot(): void
+    {
+        //menghilangkan data wrapping
+        QuoteResource::withoutWrapping();
+
+        // bagaimana kalau kita ingin menghilangkan data wrapping di semua resource
+        JsonResource::withoutWrapping();
+    }
+
+Namun fitur ini saat ini kita matikana
+
+
+
