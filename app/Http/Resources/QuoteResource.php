@@ -12,8 +12,14 @@ class QuoteResource extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray(Request $request): array
+    public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+
+            // tampilan di stell disini
+            'id' => $this->id,
+            'text' => $this->text,
+            'author' =>strtoupper($this->author),
+        ];
     }
 }

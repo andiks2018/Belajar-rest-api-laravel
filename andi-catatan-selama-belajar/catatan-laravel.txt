@@ -38,5 +38,14 @@ tambahkan $this->call([
 
 Terakhir kita mirgate refresh --seed
 
-4 mengambil satu data api
+4 mengambil satu data api hanya menampilkan id dan text dan author
+make quote resource > QuoteResource > no
+tambahkan
+    'id' => $this->id,
+    'text' => $this->text,
+    'author' =>strtoupper($this->author),
 
+selanjutnya di controller tambhakn di show
+return new QuoteResource($quote);
+
+5
