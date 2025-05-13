@@ -1,3 +1,6 @@
+QUOTE API
+----------
+
 Setelah menginstall laravel dan berhasil menjalankan php artisan serve, selanjutnya kita akan menginstall apa yang dibutuhkan selama belajar rest api :
 
 1. install API
@@ -6,6 +9,7 @@ kemudian coba cek env apakah sudah terhubung ke database nya
 ganti database name sesuai yang sesuai di env
 
 2 install controller dan model
+artisan make controller > QuoteController > api > yes > Quote
 
-3 migration dan seeder
+3 Model migration Factory dan Seeder
 
