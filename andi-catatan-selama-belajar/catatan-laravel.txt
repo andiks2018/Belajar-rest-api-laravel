@@ -1,5 +1,5 @@
 QUOTE API
-----------
+--------------------------
 
 Setelah menginstall laravel dan berhasil menjalankan php artisan serve, selanjutnya kita akan menginstall apa yang dibutuhkan selama belajar rest api :
 
@@ -11,5 +11,32 @@ ganti database name sesuai yang sesuai di env
 2 install controller dan model
 artisan make controller > QuoteController > api > yes > Quote
 
+tambahaan di api.php
+Route::apiResource('/quote', QuoteController::class);
+
 3 Model migration Factory dan Seeder
+
+Quote.php
+tambahkan protected
+make migration create_quote_table >yes > quotes >
+di file itu tambahkan text dan author
+
+selanjutnya buat factory
+make factory > QuoteFactory > yes > Quote
+tambahkan  'text' => $this->faker->text(),
+
+selanjutnya
+make seeder > QuoteSeeder
+tambahkan Quote::factory()
+            ->count(10)
+            ->create();
+
+selanjtunya cari DatabaseSeeder.php
+tambahkan $this->call([
+            QuoteSeeder::class,
+        ]);
+
+Terakhir kita mirgate refresh --seed
+
+4 mengambil satu data api
 
