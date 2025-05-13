@@ -1,0 +1,13 @@
+Setelah berhasil menginstall postman selanjutnya :
+
+1. di environtmen buat buat 2 variable :
+    a. Local
+    b. Staging
+
+2. Folder local :
+    a. variable : baseUrl dst. initial value jadi begini http://127.0.0.1:8000/
+
+3. test file dengan mengganti url seperti itu {{baseUrl}}api/quote/1
+
+
+

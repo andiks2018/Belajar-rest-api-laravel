@@ -1,0 +1,11 @@
+Setelah menginstall laravel dan berhasil menjalankan php artisan serve, selanjutnya kita akan menginstall apa yang dibutuhkan selama belajar rest api :
+
+1. install API
+php artisan install:api,
+kemudian coba cek env apakah sudah terhubung ke database nya
+ganti database name sesuai yang sesuai di env
+
+2 install controller dan model
+
+3 migration dan seeder
+
