@@ -25,4 +25,18 @@ berhasil
 6 bagaimana menampilkan quote ke 10
 {{baseUrl}}api/quote/10
 
-7 
+=======================================================
+SEKARANG BAGAIMANA MELAKUKAN CREATE DATA VERB HTTP POST
+
+1. buat folder baru bernama quote
+ada yang beda disini untuk create post kita menuju ke body
+key : text dan author
+value : isi sembarangnya
+di bagian atas 2 tabel ini ganti ke www.form-urlencoded
+coba lihat hasil akhirnya tampil hello gak?
+
+kemudian
+{{baseUrl}}api/quote/
+methodnya POST
+
+============================================
