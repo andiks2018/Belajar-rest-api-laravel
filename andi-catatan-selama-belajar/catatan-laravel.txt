@@ -140,4 +140,12 @@ return [
 3 di controller update
 tambahkan
 return new QuoteResource(tap($quote) ->update($request->validated()));
-    
+
+4 Bagaimana kalau kita pasang validasi untuk quote tidak boleh sama
+
+tambahkan ini di update
+// 'text' => 'required|min:20|' . Rule::unique('quotes')->ignore($this->quote),
+
+di store
+//'text' => 'required|min:20|unique:quotes',
+

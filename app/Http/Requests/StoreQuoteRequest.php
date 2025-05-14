@@ -23,6 +23,9 @@ class StoreQuoteRequest extends FormRequest
     {
            //validasi data yang masuk
          return [
+            // kalau mau unique
+            //'text' => 'required|min:20|unique:quotes',
+
             'text' => 'required|min:20',
             'author' => 'required|min:10,',
         ];
