@@ -149,3 +149,16 @@ tambahkan ini di update
 di store
 //'text' => 'required|min:20|unique:quotes',
 
+=========================================
+
+DELETE DATA
+
+1 controller
+ public function destroy(Quote $quote)
+    {
+        //
+        $quote->delete();
+        return response()->noContent();
+    }
+
+

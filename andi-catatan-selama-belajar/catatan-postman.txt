@@ -43,4 +43,19 @@ methodnya POST
 UPDATE DATA LIMO 14 Mei 2025
 1. sudah berhasil update data menggunakan method PUT
 
-2
+2. cara menggunakan post man panggil dulu datanya kemudian di edit
+biar kelihatan methodnya tekan save
+
+3. perhatikan body dan headernya beda setiap method
+
+=========================================
+
+DELETE DATA
+1. kalau mau hapus get data dulu, lihat data yang akan dihapus maunya yang mana
+
+2. kemdudian pilih id mana contoh {{baseUrl}}api/quote/13
+
+3. method yang digunakan DELETE
+
+4. di body kosongkan saja text dan authornya
+
