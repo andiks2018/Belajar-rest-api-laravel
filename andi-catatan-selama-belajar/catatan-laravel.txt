@@ -161,4 +161,56 @@ DELETE DATA
         return response()->noContent();
     }
 
+====================================
+AUTH SANCTUM (AGAR TIDAK SEMUA ORANG BISA MASUK KE API KITA)
+
+1. awalnya di luar sekarang kita masukkan kedalam auth middleware
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('/quote', QuoteController::class);
+});
+
+dan ketika dijalankan sekarang maka akan muncul kode Unauthencticated
+
+2. make controller > Api/ApiAuthController > basic
+
+controlle auth awal
+class ApiAuthController extends Controller
+{
+    public function login (Request $request)
+    {
+        // validate request
+        // check if user is exist
+        // check if password is correct
+        // generate token
+        // return response
+    }
+
+    public function register (Request $request)
+    {
+        // code ..
+    }
+
+    public function logout (Request $request)
+    {
+        // code ..
+    }
+
+}
+
+3. buat login route dan register route dan logout, biar api otomatis install make controller dulu
+
+Routenya jadi begini
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('/quote', QuoteController::class);
+    Route::post('/logout', [ApiAuthController::class, 'logout']);
+});
+
+// buat register dan login
+Route::post('/register', [ApiAuthController::class, 'register']);
+Route::post('/login', [ApiAuthController::class, 'login']);
+
+4. kita buat logika di controller auth
+
+
 

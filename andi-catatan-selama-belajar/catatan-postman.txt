@@ -59,3 +59,5 @@ DELETE DATA
 
 4. di body kosongkan saja text dan authornya
 
+====================================
+AUTH SANCTUM (AGAR TIDAK SEMUA ORANG BISA MASUK KE API KITA)
