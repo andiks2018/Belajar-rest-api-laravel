@@ -1,5 +1,5 @@
 ## Bagaimana cara belajarnya 
-punya contoh janinya https://github.com/siubie/laravel-api-course.git
+punya contoh jadinya https://github.com/siubie/laravel-api-course.git
 
 sambil test sambil punya 2 file ini : 
 - catatan laravel
