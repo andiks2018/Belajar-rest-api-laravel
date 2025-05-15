@@ -26,13 +26,15 @@ class ApiAuthController extends Controller
             ], 401);
         }
         // generate token
-        //$token = $user->createToken('token')->plainTextToken;
-        return $user->createToken('token')->plainTextToken;
+        $token = $user->createToken('token')->plainTextToken;
+        // return $user->createToken('token')->plainTextToken;
+
         // return response ini alternatif dengan
-        // return response()->json([
-        //     'message' => 'Login success',
-        //     'token' => $token
-        // ]);
+        return response()->json([
+            'message' => 'Login success',
+            'name' => $user,
+            'token' => $token
+        ], 200);
     }
 
     public function register (Request $request)

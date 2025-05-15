@@ -212,5 +212,12 @@ Route::post('/login', [ApiAuthController::class, 'login']);
 
 4. kita buat logika di controller auth
 
+5. ketemu yang bikin error karen, seharusnya ini kita di awal
 
+composer require laravel/sanctum
 
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+Menembahkan app/Models/User.php HasApiTokens
+
+6
