@@ -1,8 +1,9 @@
-saya coba buat 2 file :
-1. catatan rest api
-2. catatan postman, karena banyak ternyata memakai postman untuk rest api
+## Bagaimana cara belajarnya 
+punya contoh janinya https://github.com/siubie/laravel-api-course.git
 
-saya akan simpan di folder catatan selama belajar
+sambil test sambil punya 2 file ini : 
+- catatan laravel
+- catatan postman
 
 ## License
 
