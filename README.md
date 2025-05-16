@@ -5,10 +5,11 @@ lihat di composer.json file :
         "laravel/framework": "^12.0",
 sementara video pembelajarannya di buat dengan versi 9
 
+## buat project baru
 composer create-project --prefer-dist laravel/laravel:9 laravel-8-project
 composer create-project laravel/laravel laravel-10-project "10.*"
 
-Laravel Version	Supported PHP Versions	Release
+## Laravel Version	Supported PHP Versions 8.2 
 9*	= (8.0 - 8.2)	February 8th, 2022
 10	= (8.1 - 8.3)	February 14th, 2023
 11	= (8.2 - 8.3)	March 12th, 2024
