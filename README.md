@@ -1,3 +1,10 @@
+## Bagaimana cara melihat versi laravel di projeck laravel sebelum mulai belajar
+lihat di composer.json file :
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0",
+sementara video pembelajarannya di buat dengan versi 9
+
 ## Buat catatan selama belajar laravel rest api 
 saya coba buat 2 file :
 1. catatan rest api laravelnya
