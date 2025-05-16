@@ -61,3 +61,6 @@ DELETE DATA
 
 ====================================
 AUTH SANCTUM (AGAR TIDAK SEMUA ORANG BISA MASUK KE API KITA)
+1. Header Key : Accept, value : application/json
+2. Body, Key : email  dan password pilih x www-form-urlencoded
+3. Method POST, baseUrl api/login 

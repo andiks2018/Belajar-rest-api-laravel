@@ -22,17 +22,18 @@ class ApiAuthController extends Controller
         // check if password is correct
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json([
-                'message' => 'Bad credentials'
+                'message' => 'coba cek email dan password anda'
             ], 401);
         }
         // generate token
-        //$token = $user->createToken('token')->plainTextToken;
-        return $user->createToken('token')->plainTextToken;
+        $token = $user->createToken('token')->plainTextToken;
+        // return $user->createToken('token')->plainTextToken;
         // return response ini alternatif dengan
-        // return response()->json([
-        //     'message' => 'Login success',
-        //     'token' => $token
-        // ]);
+        return response()->json([
+            'message' => 'Login success',
+            'token' => $token,
+            'user' => $user,
+        ]);
     }
 
     public function register (Request $request)

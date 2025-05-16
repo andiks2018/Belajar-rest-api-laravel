@@ -211,6 +211,34 @@ Route::post('/register', [ApiAuthController::class, 'register']);
 Route::post('/login', [ApiAuthController::class, 'login']);
 
 4. kita buat logika di controller auth
+public function login (Request $request)
+    {
+        // validate request
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+        // check if user is exist
+        $user = User::where('email', $request->email)->first();
+        // check if password is correct
+        if (!$user || !Hash::check($request->password, $user->password)) {
+            return response()->json([
+                'message' => 'coba cek email dan password anda'
+            ], 401);
+        }
+        // generate token
+        $token = $user->createToken('token')->plainTextToken;
+        // return $user->createToken('token')->plainTextToken;
+        // return response ini alternatif dengan
+        return response()->json([
+            'message' => 'Login success',
+            'token' => $token,
+            'user' => $user,
+        ]);
 
+5 yang salah sudah berhasil di benarkan dengan
+Menembahkan app/Models/User.php HasApiTokens (tidak punya token karena belum menambahkan Hash)
+dan melakukan php artisan migrate (kenapa dia minta tabel token karena belum migrate)
 
-
+=============
+REFACTOR FUNCTION LOGIN
