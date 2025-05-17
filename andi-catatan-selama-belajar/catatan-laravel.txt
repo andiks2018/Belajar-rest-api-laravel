@@ -268,3 +268,14 @@ kita rubah
 
 ================
 CREATE LOGOUT
+1. di function logut tambahkan code tujuannya agar token yang sudah di database dihapus saja
+    $request->user()->tokens()->delete();
+        return response()->json([
+            'message' => 'Logout success'
+        ]);
+
+2. tambahan sedikit function login juga kita akan hapus token yang sudah masuk
+    $user->tokens()->delete();
+
+=================
+REGISTER 

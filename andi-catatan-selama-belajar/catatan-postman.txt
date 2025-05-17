@@ -63,4 +63,13 @@ DELETE DATA
 AUTH SANCTUM (AGAR TIDAK SEMUA ORANG BISA MASUK KE API KITA)
 1. Header Key : Accept, value : application/json
 2. Body, Key : email  dan password pilih x www-form-urlencoded
-3. Method POST, baseUrl api/login 
+3. Method POST, baseUrl api/login
+
+==========
+LOGOUT
+1. URL yang digunakan {{baseUrl}}api/logout method yang digunakan juga maasih sama POST
+2. Sebelumnya kita harus login dulu baru bisa masuk ke logut biar dapat token
+3. pilih auth > Bearer > masukkan token yang sudah didapat send
+
+================
+REGISTER

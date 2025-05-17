@@ -19,6 +19,9 @@ class ApiAuthController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             // jika berhasil login, kita ambil usernya
             $user = User::where('email', $request->email)->first();
+            // token lama dihapus
+            $user->tokens()->delete();
+            // buat token baru dibuat
             $token = $user->createToken('token')->plainTextToken;
             return response()->json([
                 'message' => 'Login success',
@@ -40,7 +43,14 @@ class ApiAuthController extends Controller
 
     public function logout (Request $request)
     {
-        // code ..
+        // hapus token
+        // $request->user()->currentAccessToken()->delete();
+        // respon no content
+        // returbn response()->noContent();
+        $request->user()->tokens()->delete();
+        return response()->json([
+            'message' => 'Logout success'
+        ]);
     }
 
 }
