@@ -242,3 +242,29 @@ dan melakukan php artisan migrate (kenapa dia minta tabel token karena belum mig
 
 =============
 REFACTOR FUNCTION LOGIN
+1. make request > LoginRequest
+- ubah authorize menjadi true
+- di function rules tambahkan
+    'email' => 'required|email',
+    'password' => 'required'
+
+2.function login yang terhubung ke LoginRequest
+kita rubah
+       if (Auth::attempt($request->only('email', 'password'))) {
+            // jika berhasil login, kita ambil usernya
+            $user = User::where('email', $request->email)->first();
+            $token = $user->createToken('token')->plainTextToken;
+            return response()->json([
+                'message' => 'Login success',
+                'token' => $token,
+                'user' => $user,
+            ]);
+        } else {
+            // jika gagal login
+            return response()->json([
+                'message' => 'coba cek email dan password anda'
+            ], 401);
+        }
+
+================
+CREATE LOGOUT
